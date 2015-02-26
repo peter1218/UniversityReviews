@@ -1,0 +1,29 @@
+﻿ @model IPagedList<UniversityListViewModel>
+  <div id="UniversityList">
+
+  
+      <div class="pagedList" data-uni-target="#UniversityList" >
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+        PagedListRenderOptions.MinimalWithItemCountText)
+    </div>
+      <div >
+
+@foreach (var item in Model)
+{
+    <div>
+        <h4>
+            @item.Name
+        </h4>
+        <div>@item.City</div>
+        <div>
+            Review:@item.CountOfReviews
+        </div>
+        <hr/>
+
+    </div>
+    
+}
+
+  </div>
+
+</div>

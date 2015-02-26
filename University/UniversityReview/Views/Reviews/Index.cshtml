@@ -1,0 +1,13 @@
+﻿@model UniversityReview.Models.University
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Reviews for @Model.Name</h2>
+@Html.Partial("_Reviews", @Model.Reviews)
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { UniversityId = Model.Id })
+</p>
+

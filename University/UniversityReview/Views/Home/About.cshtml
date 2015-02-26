@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+
+<article>
+    <p style="font-size:medium">
+        This website is developed by using Asp.net Mvc,EntityFramework,Jquery and Ajax. It's a personal home project for demonstartion 
+        
+        and learning purpose.
+    </p>
+
+    <p style="font-size:medium">
+       It can let the user register and login.  It got user authorization and authentication control. You try log in by using the 
+
+        Admin role with username: mia  and password: password to create or add new university. Almah has been introduced for diagnosis purpose.
+
+        Any users can make comments and reviews on all the universities.
+
+    </p>
+  
+    <p style="font-size:medium">
+        The website has search and paging function in the home page.  The autocomplete function has been added by using Jquery UI as well.
+
+        It also supports caching technology to provide better performance.
+
+    </p>
+
+    <p style="font-size:medium">
+         Please feel free to give any ideas or suggestions please. 
+    </p>
+</article>
+
+<aside>
+    <h3>Links</h3>
+    <p>
+      
+    </p>
+    <ul>
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    </ul>
+</aside>

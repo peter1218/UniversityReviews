@@ -1,0 +1,30 @@
+﻿@model IPagedList<UniversityListViewModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+@*@using (Ajax.BeginForm(
+
+    new AjaxOptions
+    {
+        HttpMethod = "get",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "UniversityList"
+    }
+
+
+    ))
+{
+    
+    <input type="search" name="searchTerm" />
+    <input type="submit" value="Search By Name" />*@
+
+
+ <form method="get"  action="@Url.Action("Index")" data-uni-ajax="true" data-uni-target="#UniversityList">
+
+      <input type="search" name="searchTerm" data-uni-autocomplete="@Url.Action("AutoComplete")"/>
+    <input type="submit" value="Search By Name" />
+
+ </form>
+@Html.Partial("_University",Model)
