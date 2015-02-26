@@ -14,7 +14,7 @@ using UniversityReview.Models;
 namespace UniversityReview.Controllers
 {
     [Authorize]
-
+    //
     public class AccountController : Controller
     {
         //
